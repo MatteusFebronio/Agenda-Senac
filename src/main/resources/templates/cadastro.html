@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="htpps://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Casdastro</title>
+</head>
+<body>
+
+
+<main>
+    <h1 class="h1titulo">Cadastro</h1>
+
+
+    <form action="#" th:action="@{/cadastrar_cliente}" th:object="${cliente}" method="post">
+
+        <label class="lbl" for="nome">Nome</label> <br> <br>
+        <input th:field="*{nome}" id="nome" type="text" placeholder="Digite seu Nome Completo:"><br> <br>
+
+        <label  class="lbl" for="email">E-Mail</label> <br> <br>
+        <input th:field="*{email}" id="email" type="email" placeholder="Digite seu E-Mail:"><br> <br>
+
+        <label  class="lbl" for="telefone">Telefone</label> <br> <br>
+        <input th:field="*{telefone}" id="telefone" type="tel" placeholder="Digite seu Telefone"> <br> <br>
+
+
+        <input type="submit" value="Cadastrar"><br> <br><br> <br><br> <br>
+
+    </form>
+
+</main>
+
+
+</body>
+</html>
